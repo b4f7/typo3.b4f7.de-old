@@ -1,4 +1,10 @@
 <?php
+
+$b4f7_redisConfig = [
+    'hostname' =>   'redis',
+    'port' =>       6379
+];
+
 return [
     'BE' => [
         'debug' => false,
@@ -86,30 +92,47 @@ return [
         'caching' => [
             'cacheConfigurations' => [
                 'hash' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => \TYPO3\CMS\Core\Cache\Backend\RedisBackend::class,
+                    'options' => [
+                        'database' => 2,
+                        'hostname' => $b4f7_redisConfig['hostname'],
+                        'port' => $b4f7_redisConfig['port']
+                    ]
                 ],
                 'imagesizes' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => \TYPO3\CMS\Core\Cache\Backend\RedisBackend::class,
                     'options' => [
                         'compression' => true,
+                        'database' => 3,
+                        'hostname' => $b4f7_redisConfig['hostname'],
+                        'port' => $b4f7_redisConfig['port']
                     ],
                 ],
                 'pages' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => \TYPO3\CMS\Core\Cache\Backend\RedisBackend::class,
                     'options' => [
                         'compression' => true,
+                        'database' => 4,
+                        'hostname' => $b4f7_redisConfig['hostname'],
+                        'port' => $b4f7_redisConfig['port']
                     ],
                 ],
                 'pagesection' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => \TYPO3\CMS\Core\Cache\Backend\RedisBackend::class,
                     'options' => [
                         'compression' => true,
+                        'database' => 5,
+                        'hostname' => $b4f7_redisConfig['hostname'],
+                        'port' => $b4f7_redisConfig['port']
                     ],
                 ],
                 'rootline' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => \TYPO3\CMS\Core\Cache\Backend\RedisBackend::class,
                     'options' => [
                         'compression' => true,
+                        'database' => 6,
+                        'hostname' => $b4f7_redisConfig['hostname'],
+                        'port' => $b4f7_redisConfig['port']
                     ],
                 ],
             ],
