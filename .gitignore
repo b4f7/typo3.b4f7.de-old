@@ -8,7 +8,6 @@
 /public/typo3conf/*
 !/public/typo3conf/LocalConfiguration.php
 !/public/typo3conf/AdditionalConfiguration.php
-/composer.lock
 
 # The following:
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos
