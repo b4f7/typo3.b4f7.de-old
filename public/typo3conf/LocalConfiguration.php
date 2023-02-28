@@ -1,10 +1,4 @@
 <?php
-
-$b4f7_redisConfig = [
-    'hostname' =>   'redis',
-    'port' =>       6379
-];
-
 return [
     'BE' => [
         'debug' => false,
@@ -39,6 +33,16 @@ return [
             'loginHighlightColor' => '',
             'loginLogo' => '',
             'loginLogoAlt' => '',
+        ],
+        'bootstrap_package' => [
+            'disableCssProcessing' => '0',
+            'disableGoogleFontCaching' => '0',
+            'disablePageTsBackendLayouts' => '0',
+            'disablePageTsContentElements' => '0',
+            'disablePageTsRTE' => '0',
+            'disablePageTsTCADefaults' => '0',
+            'disablePageTsTCEFORM' => '0',
+            'disablePageTsTCEMAIN' => '0',
         ],
         'extensionmanager' => [
             'automaticInstallation' => '1',
@@ -92,47 +96,47 @@ return [
         'caching' => [
             'cacheConfigurations' => [
                 'hash' => [
-                    'backend' => \TYPO3\CMS\Core\Cache\Backend\RedisBackend::class,
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\RedisBackend',
                     'options' => [
                         'database' => 2,
-                        'hostname' => $b4f7_redisConfig['hostname'],
-                        'port' => $b4f7_redisConfig['port']
-                    ]
+                        'hostname' => 'redis',
+                        'port' => 6379,
+                    ],
                 ],
                 'imagesizes' => [
-                    'backend' => \TYPO3\CMS\Core\Cache\Backend\RedisBackend::class,
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\RedisBackend',
                     'options' => [
                         'compression' => true,
                         'database' => 3,
-                        'hostname' => $b4f7_redisConfig['hostname'],
-                        'port' => $b4f7_redisConfig['port']
+                        'hostname' => 'redis',
+                        'port' => 6379,
                     ],
                 ],
                 'pages' => [
-                    'backend' => \TYPO3\CMS\Core\Cache\Backend\RedisBackend::class,
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\RedisBackend',
                     'options' => [
                         'compression' => true,
                         'database' => 4,
-                        'hostname' => $b4f7_redisConfig['hostname'],
-                        'port' => $b4f7_redisConfig['port']
+                        'hostname' => 'redis',
+                        'port' => 6379,
                     ],
                 ],
                 'pagesection' => [
-                    'backend' => \TYPO3\CMS\Core\Cache\Backend\RedisBackend::class,
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\RedisBackend',
                     'options' => [
                         'compression' => true,
                         'database' => 5,
-                        'hostname' => $b4f7_redisConfig['hostname'],
-                        'port' => $b4f7_redisConfig['port']
+                        'hostname' => 'redis',
+                        'port' => 6379,
                     ],
                 ],
                 'rootline' => [
-                    'backend' => \TYPO3\CMS\Core\Cache\Backend\RedisBackend::class,
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\RedisBackend',
                     'options' => [
                         'compression' => true,
                         'database' => 6,
-                        'hostname' => $b4f7_redisConfig['hostname'],
-                        'port' => $b4f7_redisConfig['port']
+                        'hostname' => 'redis',
+                        'port' => 6379,
                     ],
                 ],
             ],

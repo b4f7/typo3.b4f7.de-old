@@ -1,0 +1,27 @@
+{
+  "name": "b4f7/site-package",
+  "type": "typo3-cms-extension",
+  "description": "Site package for the website at typo3.b4f7.de",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Björn Feischen",
+      "role": "Developer",
+      "homepage": "https://b4f7.de/"
+    }
+  ],
+  "require": {
+    "typo3/cms-core": "^11.5.0",
+    "bk2k/bootstrap-package": "^13.0.1"
+  },
+  "autoload": {
+    "psr-4": {
+      "b4f7\\SitePackage\\": "Classes/"
+    }
+  },
+  "extra": {
+    "typo3/cms": {
+      "extension-key": "b4f7_site_package"
+    }
+  }
+}
