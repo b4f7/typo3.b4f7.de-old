@@ -32,11 +32,8 @@ jobs:
     - name: Install dependencies
       run: composer install --prefer-dist --no-progress --optimize-autoloader
       
-    - name: Create archive
-      run: zip build.zip ./* -r -x \.ddev
-      
     - name: Upload artifact
-      uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v3
       with:
         name: build
-        path: build.zip
+        path: ./*
