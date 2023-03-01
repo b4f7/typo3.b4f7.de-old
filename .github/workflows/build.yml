@@ -15,28 +15,29 @@ jobs:
     runs-on: ubuntu-22.04
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Validate composer.json and composer.lock
-      run: composer validate
+      - name: Validate composer.json and composer.lock
+        run: composer validate
 
-    - name: Cache Composer packages
-      id: composer-cache
-      uses: actions/cache@v3
-      with:
-        path: vendor
-        key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
-        restore-keys: |
-          ${{ runner.os }}-php-
+      - name: Cache Composer packages
+        id: composer-cache
+        uses: actions/cache@v3
+        with:
+          path: vendor
+          key: ${{ runner.os }}-php-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-php-
 
-    - name: Install dependencies
-      run: composer install --prefer-dist --no-progress --optimize-autoloader
-      
-    - name: Archive build
-      run: zip build.zip ./* -r -q
-      
-    - name: Upload artifact
-      uses: actions/upload-artifact@v3
-      with:
-        name: build
-        path: build.zip
+      - name: Install dependencies
+        run: composer install --prefer-dist --no-progress --optimize-autoloader
+
+      - name: Prepare ssh key
+        env:
+          DEPLOYER_SSH_KEY: ${{ secrets.DEPLOYER_SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$DEPLOYER_SSH_KEY" > ~/.ssh/.id_ed25519
+
+      - name: Deploy using deployer
+        run: composer deploy:production
