@@ -63,6 +63,15 @@
     ],
     "deploy:production": [
       "vendor/bin/dep -f deploy/deploy.php deploy production"
+    ],
+    "deploy": [
+      "@deploy:production"
+    ],
+    "pull:production": [
+      "vendor/bin/dep -f deploy/deploy.php pull production"
+    ],
+    "pull": [
+      "@pull:production"
     ]
   },
   "require-dev": {

@@ -50,3 +50,25 @@ task('deploy', [
 ]);
 
 after('deploy:failed', 'deploy:unlock');
+
+task('pull_database', function () {
+    info('Dumping remote database...');
+    run('pg_dump typo3 | pigz > /tmp/prod-dump.sql.gz');
+
+    info('Downloading dump...');
+    download('/tmp/prod-dump.sql.gz', '/tmp');
+    run('rm /tmp/prod-dump.sql.gz');
+
+    info('Importing dump locally...');
+    runLocally('ddev import-db --src=/tmp/prod-dump.sql.gz');
+    runLocally('rm /tmp/prod-dump.sql.gz');
+})->desc('Pull remote database');
+
+task('pull_assets', function () {
+    download('{{deploy_path}}/shared/public/fileadmin/', './public/fileadmin/');
+})->desc('Pull remote assets');
+
+task('pull', [
+    'pull_database',
+    'pull_assets'
+])->desc('Pull remote database and assets');
