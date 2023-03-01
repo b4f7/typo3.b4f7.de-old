@@ -1,6 +1,5 @@
 /.idea
 /var/*
-!/var/labels
 /vendor
 /public/*
 !/public/.htaccess
