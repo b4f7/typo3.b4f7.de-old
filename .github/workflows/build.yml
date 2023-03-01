@@ -32,6 +32,10 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --optimize-autoloader
 
+      # apparently the action doesn't support specifying where the recipe is
+      - name: Prepare deployment
+        run: cp deploy/deploy.php .
+
       - name: Deploy using deployer
         uses: deployphp/action@v1
         with:
