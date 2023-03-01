@@ -59,6 +59,9 @@
     ],
     "post-autoload-dump": [
       "@typo3-cms-scripts"
+    ],
+    "deploy:production": [
+      "vendor/bin/dep -f deploy/deploy.php deploy production"
     ]
   },
   "require-dev": {
