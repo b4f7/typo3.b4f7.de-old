@@ -1,0 +1,15 @@
+plugin.tx_bootstrap_package {
+    _LOCAL_LANG {
+        default {
+            cookieconsent.common.message = This website doesn't store or process any personal data. Should you wish to read more anyway, feel free.
+            cookieconsent.common.dismiss = Got it!
+            cookieconsent.common.link = Privacy policy
+        }
+
+        de {
+            cookieconsent.common.message = Diese Website speichert oder verarbeitet keine personenbezogenen Daten. Wer dennoch was lesen möchte, bitteschön.
+            cookieconsent.common.dismiss = Verstanden!
+            cookieconsent.common.link = Datenschutzerklärung
+        }
+    }
+}
