@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b762dcf2ff61a5c55e8493d2038bc4aa",
+    "content-hash": "d953adb331cf1d81339e67053853e060",
     "packages": [
         {
             "name": "b4f7/site-package",
@@ -7241,7 +7241,51 @@
             "time": "2022-06-03T18:03:27+00:00"
         }
     ],
-    "packages-dev": [],
+    "packages-dev": [
+        {
+            "name": "deployer/deployer",
+            "version": "v7.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/deployphp/deployer.git",
+                "reference": "06f77fb6c37fde3ddcc850582ee94e35bb28f17e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/deployphp/deployer/zipball/06f77fb6c37fde3ddcc850582ee94e35bb28f17e",
+                "reference": "06f77fb6c37fde3ddcc850582ee94e35bb28f17e",
+                "shasum": ""
+            },
+            "bin": [
+                "dep"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Anton Medvedev",
+                    "email": "anton@medv.io"
+                }
+            ],
+            "description": "Deployment Tool",
+            "homepage": "https://deployer.org",
+            "support": {
+                "docs": "https://deployer.org/docs",
+                "issues": "https://github.com/deployphp/deployer/issues",
+                "source": "https://github.com/deployphp/deployer"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/antonmedv",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-02-22T19:31:56+00:00"
+        }
+    ],
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
