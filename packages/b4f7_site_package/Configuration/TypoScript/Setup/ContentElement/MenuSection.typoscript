@@ -1,0 +1,3 @@
+# We need to specify the table here.
+# The original uses "sectionIndex = 1" which leads to an "undefined column" error.
+tt_content.menu_section.dataProcessing.10.dataProcessing.20.where = "tt_content"."sectionIndex" = 1
