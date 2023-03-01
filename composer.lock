@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4ad40663e64c17b9a379be46c589e1f3",
+    "content-hash": "7bec2337e9d4e94e856c885e757a1c4d",
     "packages": [
         {
             "name": "b4f7/site-package",
@@ -268,21 +268,24 @@
         },
         {
             "name": "dasprid/enum",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DASPRiD/Enum.git",
-                "reference": "5abf82f213618696dda8e3bf6f64dd042d8542b2"
+                "reference": "8e6b6ea76eabbf19ea2bf5b67b98e1860474012f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DASPRiD/Enum/zipball/5abf82f213618696dda8e3bf6f64dd042d8542b2",
-                "reference": "5abf82f213618696dda8e3bf6f64dd042d8542b2",
+                "url": "https://api.github.com/repos/DASPRiD/Enum/zipball/8e6b6ea76eabbf19ea2bf5b67b98e1860474012f",
+                "reference": "8e6b6ea76eabbf19ea2bf5b67b98e1860474012f",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=7.1 <9.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^7 | ^8 | ^9",
-                "squizlabs/php_codesniffer": "^3.4"
+                "squizlabs/php_codesniffer": "*"
             },
             "type": "library",
             "autoload": {
@@ -309,9 +312,9 @@
             ],
             "support": {
                 "issues": "https://github.com/DASPRiD/Enum/issues",
-                "source": "https://github.com/DASPRiD/Enum/tree/1.0.3"
+                "source": "https://github.com/DASPRiD/Enum/tree/1.0.4"
             },
-            "time": "2020-10-02T16:03:48+00:00"
+            "time": "2023-03-01T18:44:03+00:00"
         },
         {
             "name": "doctrine/annotations",
@@ -2630,12 +2633,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/cache-contracts.git",
-                "reference": "668f6bbdfd450c5a54ce240bf856c71860a43319"
+                "reference": "eeb71f04b6f7f34ca6d15633df82e014528b1632"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/668f6bbdfd450c5a54ce240bf856c71860a43319",
-                "reference": "668f6bbdfd450c5a54ce240bf856c71860a43319",
+                "url": "https://api.github.com/repos/symfony/cache-contracts/zipball/eeb71f04b6f7f34ca6d15633df82e014528b1632",
+                "reference": "eeb71f04b6f7f34ca6d15633df82e014528b1632",
                 "shasum": ""
             },
             "require": {
@@ -2701,7 +2704,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-02T07:48:03+00:00"
+            "time": "2023-03-01T10:32:47+00:00"
         },
         {
             "name": "symfony/config",
@@ -2976,12 +2979,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/deprecation-contracts.git",
-                "reference": "0121954c80fd17c18cf050fe73360e63bb43d4fb"
+                "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/0121954c80fd17c18cf050fe73360e63bb43d4fb",
-                "reference": "0121954c80fd17c18cf050fe73360e63bb43d4fb",
+                "url": "https://api.github.com/repos/symfony/deprecation-contracts/zipball/e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
+                "reference": "e2d1534420bd723d0ef5aec58a22c5fe60ce6f5e",
                 "shasum": ""
             },
             "require": {
@@ -3035,7 +3038,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-02T07:48:03+00:00"
+            "time": "2023-03-01T10:25:55+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -7230,6 +7233,107 @@
             "time": "2022-07-28T11:24:11+00:00"
         },
         {
+            "name": "web-vision/wv_deepltranslate",
+            "version": "2.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/web-vision/wv_deepltranslate.git",
+                "reference": "31b445cf502c2794d0dfdb24aa2476da51c159e3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/web-vision/wv_deepltranslate/zipball/31b445cf502c2794d0dfdb24aa2476da51c159e3",
+                "reference": "31b445cf502c2794d0dfdb24aa2476da51c159e3",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "ext-gd": "*",
+                "ext-json": "*",
+                "ext-pdo": "*",
+                "php": "^7.4 || ^8.0",
+                "typo3/cms-backend": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-core": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-extbase": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-extensionmanager": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-fluid": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-frontend": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-install": "^9.5 || ^10.4 || ^11.5",
+                "typo3fluid/fluid": "^2.7"
+            },
+            "require-dev": {
+                "armin/editorconfig-cli": "^1.5",
+                "b13/container": "^1.6",
+                "friendsofphp/php-cs-fixer": "^3.0",
+                "helhum/typo3-console": "^5.8 || ^6.7 || ^7.1",
+                "helmich/typo3-typoscript-lint": "^2.5",
+                "phpstan/phpstan": "^1.3",
+                "saschaegerer/phpstan-typo3": "^1.0",
+                "symfony/var-dumper": "^5.4",
+                "typo3/cms-belog": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-filelist": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-info": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-lowlevel": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-tstemplate": "^9.5 || ^10.4 || ^11.5",
+                "typo3/cms-workspaces": "^9.5 || ^10.4 || ^11.5",
+                "typo3/coding-standards": "^0.5",
+                "typo3/testing-framework": "^4.11.1 || ^6.16"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "cms-package-dir": "{$vendor-dir}/typo3/cms",
+                    "extension-key": "wv_deepltranslate",
+                    "ignore-as-root": false,
+                    "web-dir": ".Build/Web",
+                    "app-dir": ".Build"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "WebVision\\WvDeepltranslate\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "web-vision GmbH",
+                    "email": "hello@web-vision.de",
+                    "role": "Maintainer"
+                },
+                {
+                    "name": "Mark Houben",
+                    "email": "markhouben91@gmail.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Ricky Mathew",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anu Bhuvanendran Nair",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Fork of deepltranslate from pitsolutions. This extension provides option to translate content element, and tca record texts to Deepl and Google supported languages using Deepl and Googletranslate Api services.",
+            "homepage": "https://www.web-vision.de/en/automated-translations-with-typo3-and-deepl.html",
+            "keywords": [
+                "TYPO3 CMS",
+                "deepl",
+                "extension",
+                "googletranslate",
+                "translate"
+            ],
+            "support": {
+                "issues": "https://github.com/web-vision/wv_deepltranslate/issues",
+                "source": "https://github.com/web-vision/wv_deepltranslate"
+            },
+            "time": "2023-01-31T13:23:34+00:00"
+        },
+        {
             "name": "webmozart/assert",
             "version": "1.11.0",
             "source": {
@@ -7291,16 +7395,16 @@
     "packages-dev": [
         {
             "name": "deployer/deployer",
-            "version": "v7.2.0",
+            "version": "v7.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/deployphp/deployer.git",
-                "reference": "06f77fb6c37fde3ddcc850582ee94e35bb28f17e"
+                "reference": "61314b16a776da3ba332ee0390e999a361431e52"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/deployphp/deployer/zipball/06f77fb6c37fde3ddcc850582ee94e35bb28f17e",
-                "reference": "06f77fb6c37fde3ddcc850582ee94e35bb28f17e",
+                "url": "https://api.github.com/repos/deployphp/deployer/zipball/61314b16a776da3ba332ee0390e999a361431e52",
+                "reference": "61314b16a776da3ba332ee0390e999a361431e52",
                 "shasum": ""
             },
             "bin": [
@@ -7330,7 +7434,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-02-22T19:31:56+00:00"
+            "time": "2023-03-01T20:16:58+00:00"
         }
     ],
     "aliases": [],

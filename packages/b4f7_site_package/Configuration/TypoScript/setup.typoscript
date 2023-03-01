@@ -1,3 +1,4 @@
 @import 'EXT:bootstrap_package/Configuration/TypoScript/setup.typoscript'
+@import 'EXT:wv_deepltranslate/Configuration/TypoScript/setup.typoscript'
 
-@import 'EXT:b4f7_site_package/Configuration/TypoScript/Setup/*.typoscript'
+@import 'EXT:b4f7_site_package/Configuration/TypoScript/Setup/**/*.typoscript'

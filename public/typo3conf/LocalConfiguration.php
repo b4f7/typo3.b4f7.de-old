@@ -48,6 +48,13 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
+        'wv_deepltranslate' => [
+            'apiKey' => '',
+            'apiUrl' => 'https://api.deepl.com/v2/translate',
+            'deeplFormality' => 'default',
+            'googleapiKey' => '',
+            'googleapiUrl' => 'https://translation.googleapis.com/language/translate/v2',
+        ],
     ],
     'FE' => [
         'cacheHash' => [
