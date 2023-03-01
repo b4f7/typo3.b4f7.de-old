@@ -28,6 +28,7 @@
   "require": {
     "b4f7/site-package": "@dev",
     "helhum/typo3-console": "^7.0.2",
+    "spooner/deployer-information": "^1.4",
     "typo3/cms-backend": "^11.5.0",
     "typo3/cms-belog": "^11.5.0",
     "typo3/cms-beuser": "^11.5.0",

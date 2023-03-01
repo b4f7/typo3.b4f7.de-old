@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d953adb331cf1d81339e67053853e060",
+    "content-hash": "4ad40663e64c17b9a379be46c589e1f3",
     "packages": [
         {
             "name": "b4f7/site-package",
@@ -2480,6 +2480,53 @@
                 "source": "https://github.com/scssphp/scssphp/tree/v1.11.0"
             },
             "time": "2022-09-02T21:24:55+00:00"
+        },
+        {
+            "name": "spooner/deployer-information",
+            "version": "1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://git.spooner.io/spooner/deployer_information/",
+                "reference": "83b0cc096ce24bffa6b750c9e983ca0898987907"
+            },
+            "require": {
+                "php": "^7.2 || ^8.0",
+                "typo3/cms-core": "^8.7 || ^9.5 || ^10.4 || ^11.5 || ^12.0"
+            },
+            "suggest": {
+                "ext-intl": "*"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "deployer_information"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "SpoonerWeb\\DeployerInformation\\": "Classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Thomas Löffler",
+                    "email": "loeffler@spooner-web.de",
+                    "homepage": "https://spooner-web.de",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Show information about the last deployment in the TYPO3 system information toolbar item",
+            "keywords": [
+                "deployer",
+                "extension",
+                "toolbar",
+                "typo3"
+            ],
+            "time": "2022-12-01T10:12:02+00:00"
         },
         {
             "name": "symfony/cache",
@@ -7298,5 +7345,5 @@
     "platform-overrides": {
         "php": "8.1"
     },
-    "plugin-api-version": "2.2.0"
+    "plugin-api-version": "2.3.0"
 }
