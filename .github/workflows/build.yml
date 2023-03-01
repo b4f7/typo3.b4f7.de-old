@@ -32,12 +32,8 @@ jobs:
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress --optimize-autoloader
 
-      - name: Prepare ssh key
-        env:
-          DEPLOYER_SSH_KEY: ${{ secrets.DEPLOYER_SSH_KEY }}
-        run: |
-          mkdir -p ~/.ssh
-          echo "$DEPLOYER_SSH_KEY" > ~/.ssh/.id_ed25519
-
       - name: Deploy using deployer
-        run: composer deploy:production
+        uses: deployphp/action@v1
+        with:
+          dep: deploy
+          private-key: ${{ secrets.DEPLOYER_SSH_KEY }}
