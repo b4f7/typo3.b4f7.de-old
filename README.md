@@ -1,58 +1,28 @@
-# TYPO3 CMS Base Distribution
+# TYPO3@b4f7
 
-Get going quickly with TYPO3 CMS.
+[![Build](https://github.com/b4f7/typo3.b4f7.de/actions/workflows/build.yml/badge.svg)](https://github.com/b4f7/typo3.b4f7.de/actions/workflows/build.yml)
+
+The TYPO3 project for the website running at https://typo3.b4f7.de/.
 
 ## Prerequisites
 
-* PHP 7.4
-* [Composer](https://getcomposer.org/download/)
+- Docker
+- ddev
 
-## Quickstart
-
-* `composer create-project typo3/cms-base-distribution project-name ^11`
-* `cd project-name`
-
-### Setup
-
-To start an interactive installation, you can do so by executing the following
-command and then follow the wizard:
+## Setup
 
 ```bash
-composer exec typo3cms install:setup
+ddev restart
+ddev auth ssh
+ddev composer install
 ```
 
-### Setup unattended (optional)
-
-If you're a more advanced user, you might want to leverage the unattended installation.
-To do this, you need to execute the following command and substitute the arguments
-with your own environment configuration.
+## Deploy
 
 ```bash
-composer exec typo3cms install:setup \
-    --no-interaction \
-    --database-user-name=typo3 \
-    --database-user-password=typo3 \
-    --database-host-name=127.0.0.1 \
-    --database-port=3306 \
-    --database-name=typo3 \
-    --use-existing-database \
-    --admin-user-name=admin \
-    --admin-password=password \
-    --site-setup-type=site
+ddev composer deploy:production
 ```
-
-### Development server
-
-While it's advised to use a more sophisticated web server such as
-Apache 2 or Nginx, you can instantly run the project by using PHPs` built-in
-[web server](https://secure.php.net/manual/en/features.commandline.webserver.php).
-
-* `TYPO3_CONTEXT=Development php -S localhost:8000 -t public`
-* open your browser at "http://localhost:8000"
-
-Please be aware that the built-in web server is single threaded and only meant
-to be used for development.
 
 ## License
 
-GPL-2.0 or later
+GPL-2.0 or later in accordance with TYPO3 source.
