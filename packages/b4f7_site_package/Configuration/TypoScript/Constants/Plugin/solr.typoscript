@@ -1,0 +1,7 @@
+plugin.tx_solr {
+    # cat=b4f7_site_package/solr; type=string; label=Solr user name
+    username =
+
+    # cat=b4f7_site_package/solr; type=string; label=Solr password
+    password =
+}

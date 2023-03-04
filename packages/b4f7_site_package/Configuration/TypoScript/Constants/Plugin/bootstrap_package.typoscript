@@ -3,3 +3,12 @@ plugin.bootstrap_package_contentelements.view {
     partialRootPath = EXT:b4f7_site_package/Resources/Private/Partials/ContentElements/
     layoutRootPath = EXT:b4f7_site_package/Resources/Private/Layouts/ContentElements/
 }
+
+#plugin.bootstrap_package {
+#    settings.scss {
+#        primary = #6bf178
+#        secondary = #b80c09
+#    }
+#}
+
+#page.logo.file = EXT:b4f7_site_package/Resources/Public/Images/logo.svg
