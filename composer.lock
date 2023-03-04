@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d3658a88dc6c8c44015938c30ee36f6f",
+    "content-hash": "85185ed97a69845d1fc07a9fae5adaf4",
     "packages": [
         {
             "name": "b4f7/locator",
@@ -12,10 +12,11 @@
             "dist": {
                 "type": "path",
                 "url": "./packages/b4f7_locator",
-                "reference": "b6641af178a428c01340e78dab48c5eeb7f97ba8"
+                "reference": "c9e8dc3239d339a35f6fd9832d94f6e2eb5cc390"
             },
             "require": {
                 "friendsoftypo3/tt-address": "^7.1",
+                "php": "^8.1",
                 "typo3/cms-core": "^11.5"
             },
             "type": "typo3-cms-extension",
@@ -7548,7 +7549,9 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": "^8.1"
+    },
     "platform-dev": [],
     "platform-overrides": {
         "php": "8.1"
