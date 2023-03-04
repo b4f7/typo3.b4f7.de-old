@@ -48,6 +48,11 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
+        'tt_address' => [
+            'backwardsCompatFormat' => '%1$s %3$s',
+            'readOnlyNameField' => '1',
+            'storeBackwardsCompatName' => '1',
+        ],
         'wv_deepltranslate' => [
             'apiKey' => '',
             'apiUrl' => 'https://api.deepl.com/v2/translate',
