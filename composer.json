@@ -26,6 +26,7 @@
     }
   ],
   "require": {
+    "php": "^8.1",
     "b4f7/locator": "@dev",
     "b4f7/site-package": "@dev",
     "helhum/typo3-console": "^7.0.2",
