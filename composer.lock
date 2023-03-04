@@ -4,8 +4,46 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7bec2337e9d4e94e856c885e757a1c4d",
+    "content-hash": "d3658a88dc6c8c44015938c30ee36f6f",
     "packages": [
+        {
+            "name": "b4f7/locator",
+            "version": "dev-master",
+            "dist": {
+                "type": "path",
+                "url": "./packages/b4f7_locator",
+                "reference": "b6641af178a428c01340e78dab48c5eeb7f97ba8"
+            },
+            "require": {
+                "friendsoftypo3/tt-address": "^7.1",
+                "typo3/cms-core": "^11.5"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "b4f7_locator"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "b4f7\\Locator\\": "Classes/"
+                }
+            },
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "Björn Feischen",
+                    "role": "Developer",
+                    "homepage": "https://b4f7.de/"
+                }
+            ],
+            "description": "Locator",
+            "transport-options": {
+                "relative": true
+            }
+        },
         {
             "name": "b4f7/site-package",
             "version": "dev-master",
@@ -986,6 +1024,71 @@
                 "source": "https://github.com/darylldoyle/svg-sanitizer/tree/0.15.4"
             },
             "time": "2022-02-21T09:13:59+00:00"
+        },
+        {
+            "name": "friendsoftypo3/tt-address",
+            "version": "7.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/FriendsOfTYPO3/tt_address.git",
+                "reference": "112c1eb6e6aadebc47bb76e7002e31932feb612e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/FriendsOfTYPO3/tt_address/zipball/112c1eb6e6aadebc47bb76e7002e31932feb612e",
+                "reference": "112c1eb6e6aadebc47bb76e7002e31932feb612e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.4",
+                "typo3/cms-core": "^11.5 || ^12"
+            },
+            "replace": {
+                "typo3-ter/tt-address": "self.version"
+            },
+            "require-dev": {
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "sbuerk/typo3-cmscomposerinstallers-testingframework-bridge": "^0.0.1",
+                "typo3/cms-extensionmanager": "^11.5 || ^12",
+                "typo3/cms-install": "^11.5 || ^12"
+            },
+            "type": "typo3-cms-extension",
+            "extra": {
+                "typo3/cms": {
+                    "extension-key": "tt_address",
+                    "app-dir": ".Build",
+                    "web-dir": ".Build/public"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "FriendsOfTYPO3\\TtAddress\\": "Classes"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "tt_address Development Team",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Displays a list of addresses from an address table on the page.",
+            "homepage": "https://extensions.typo3.org/extension/tt_address",
+            "keywords": [
+                "addresses",
+                "extension",
+                "typo3"
+            ],
+            "support": {
+                "docs": "https://docs.typo3.org/p/friendsoftypo3/tt-address/main/en-us/",
+                "issues": "https://github.com/FriendsOfTYPO3/tt_address/issues",
+                "source": "https://github.com/FriendsOfTYPO3/tt_address"
+            },
+            "time": "2023-02-16T10:44:28+00:00"
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -7440,6 +7543,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
+        "b4f7/locator": 20,
         "b4f7/site-package": 20
     },
     "prefer-stable": false,

@@ -1,0 +1,4 @@
+[submodule "packages/b4f7_locator"]
+	path = packages/b4f7_locator
+	url = git@github.com:b4f7/b4f7_locator.git
+	branch = master
