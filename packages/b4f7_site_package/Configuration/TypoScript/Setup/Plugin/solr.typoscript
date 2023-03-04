@@ -1,8 +1,4 @@
 plugin.tx_solr.solr {
-    read {
-        username = {$plugin.tx_solr.username}
-        password = {$plugin.tx_solr.password}
-    }
-
-    write < .read
+    username = {$plugin.tx_solr.username}
+    password = {$plugin.tx_solr.password}
 }
