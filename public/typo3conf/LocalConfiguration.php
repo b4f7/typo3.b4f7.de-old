@@ -48,6 +48,19 @@ return [
             'automaticInstallation' => '1',
             'offlineMode' => '0',
         ],
+        'scheduler' => [
+            'maxLifetime' => '1440',
+            'showSampleTasks' => '1',
+        ],
+        'solr' => [
+            'allowSelfSignedCertificates' => '0',
+            'includeGlobalQParameterInCacheHash' => '0',
+            'monitoringType' => '0',
+            'pluginNamespaces' => 'tx_solr',
+            'useConfigurationFromClosestTemplate' => '0',
+            'useConfigurationMonitorTables' => '',
+            'useConfigurationTrackRecordsOutsideSiteroot' => '1',
+        ],
         'tt_address' => [
             'backwardsCompatFormat' => '%1$s %3$s',
             'readOnlyNameField' => '1',

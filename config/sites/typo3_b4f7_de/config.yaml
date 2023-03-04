@@ -1,4 +1,8 @@
-base: /
+base: 'https://typo3.b4f7.de/'
+baseVariants:
+  -
+    base: 'https://typo3.b4f7.de.ddev.site/'
+    condition: 'getenv("IS_DDEV_PROJECT") == "true"'
 languages:
   -
     title: Deutsch
@@ -13,6 +17,7 @@ languages:
     direction: ltr
     flag: de
     websiteTitle: ''
+    solr_core_read: core_de
   -
     title: Englisch
     enabled: true
@@ -28,5 +33,12 @@ languages:
     fallbacks: '0'
     flag: en-us-gb
     languageId: 1
+    solr_core_read: core_en
 rootPageId: 1
-websiteTitle: ''
+solr_enabled_read: true
+solr_host_read: '%env(SOLR_HOST)%'
+solr_path_read: /
+solr_port_read: '%env(SOLR_PORT)%'
+solr_scheme_read: '%env(SOLR_SCHEME)%'
+solr_use_write_connection: false
+websiteTitle: TYPO3@b4f7
