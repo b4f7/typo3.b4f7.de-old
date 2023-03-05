@@ -20,6 +20,8 @@ web_environment:
     - SOLR_HOST=solr
     - SOLR_PORT=8983
     - SOLR_SCHEME=http
+    - SOLR_USER=solr
+    - SOLR_PASSWORD=solr
 nodejs_version: "18"
 
 # Key features of ddev's config.yaml:
