@@ -1,4 +1,11 @@
-plugin.tx_solr.solr {
-    username = {$plugin.tx_solr.username}
-    password = {$plugin.tx_solr.password}
+plugin.tx_solr {
+    solr {
+        username = {$plugin.tx_solr.username}
+        password = {$plugin.tx_solr.password}
+    }
+
+    index.queue.pages.indexer.frontendDataHelper.scheme = https
+
+    statistics = 1
+    statistics.anonymizeIP = 2
 }
