@@ -2,5 +2,7 @@
 @import 'EXT:wv_deepltranslate/Configuration/TypoScript/constants.typoscript'
 @import 'EXT:solr/Configuration/TypoScript/Solr/constants.typoscript'
 
+@import 'EXT:b4f7_locator/Configuration/TypoScript/constants.typoscript'
+
 @import 'EXT:b4f7_site_package/Configuration/TypoScript/Constants/**/*.typoscript'
 @import 'EXT:b4f7_site_package/Configuration/TypoScript/Constants/*.typoscript'
