@@ -1,0 +1,6 @@
+plugin.tx_b4f7sitepackage {
+    settings {
+        # cat=b4f7_site_package; type=string; label=Search results page PID
+        searchPid =
+    }
+}

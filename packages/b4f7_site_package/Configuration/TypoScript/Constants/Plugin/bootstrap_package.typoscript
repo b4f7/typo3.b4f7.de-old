@@ -1,3 +1,9 @@
+page.fluidtemplate {
+    templateRootPath = EXT:b4f7_site_package/Resources/Private/Templates/Page/
+    partialRootPath = EXT:b4f7_site_package/Resources/Private/Partials/Page/
+    layoutRootPath = EXT:b4f7_site_package/Resources/Private/Layouts/Page/
+}
+
 plugin.bootstrap_package_contentelements.view {
     templateRootPath = EXT:b4f7_site_package/Resources/Private/Templates/ContentElements/
     partialRootPath = EXT:b4f7_site_package/Resources/Private/Partials/ContentElements/
