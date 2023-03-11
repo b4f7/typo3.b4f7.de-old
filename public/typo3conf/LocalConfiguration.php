@@ -1,4 +1,5 @@
 <?php
+
 return [
     'BE' => [
         'debug' => false,
@@ -77,6 +78,9 @@ return [
     'FE' => [
         'cacheHash' => [
             'enforceValidation' => true,
+            'excludedParameters' => [
+                '_', // jQuery's cache-busting parameter
+            ],
         ],
         'debug' => false,
         'disableNoCacheParameter' => true,
