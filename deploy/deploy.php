@@ -9,7 +9,7 @@ set('repository', 'git@github.com:b4f7/typo3.b4f7.de.git');
 set('keep_releases', 5);
 
 host('production')
-    ->setHostname('web.srv.b4f7.de')
+    ->setHostname('typo3.b4f7.de')
     ->setRemoteUser('deployer')
     ->set('branch', 'master')
     ->set('public_urls', ['https://typo3.b4f7.de/'])
@@ -52,15 +52,21 @@ task('deploy', [
 after('deploy:failed', 'deploy:unlock');
 
 task('pull_database', function () {
+    cd('{{deploy_path}}/current');
+
     info('Dumping remote database...');
-    run('pg_dump typo3 | pigz > /tmp/prod-dump.sql.gz');
+    run('php vendor/bin/typo3cms database:export | gzip > /tmp/prod-dump.sql.gz');
 
     info('Downloading dump...');
     download('/tmp/prod-dump.sql.gz', '/tmp');
     run('rm /tmp/prod-dump.sql.gz');
 
     info('Importing dump locally...');
-    runLocally('ddev import-db --src=/tmp/prod-dump.sql.gz');
+    if (getenv('IS_DDEV_PROJECT')) {
+        runLocally('gzip -dc /tmp/prod-dump.sql.gz | mysql -udb -pdb db');
+    } else {
+        runLocally('ddev import-db --src=/tmp/prod-dump.sql.gz');
+    }
     runLocally('rm /tmp/prod-dump.sql.gz');
 })->desc('Pull remote database');
 
