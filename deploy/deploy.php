@@ -27,8 +27,8 @@ task('deploy:cache', function () {
 
 task('deploy:db', function () {
     cd('{{release_path}}');
-    run('vendor/bin/typo3 upgrade:run');
     run('vendor/bin/typo3cms database:updateschema');
+    run('vendor/bin/typo3 upgrade:run');
 });
 
 task('deploy:language', function () {
