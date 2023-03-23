@@ -1,10 +1,8 @@
 <?php
-
 return [
     'BE' => [
         'debug' => false,
         'explicitADmode' => 'explicitAllow',
-        'installToolPassword' => '$argon2i$v=19$m=65536,t=16,p=1$QlZpdmdQSlBwY1pvcWtsVQ$OnpY2vGACNRfesCKFLmveJR7Bxea/luvjxZ2SWKNF+Q',
         'passwordHashing' => [
             'className' => 'TYPO3\\CMS\\Core\\Crypto\\PasswordHashing\\Argon2iPasswordHash',
             'options' => [],
@@ -13,8 +11,12 @@ return [
     'DB' => [
         'Connections' => [
             'Default' => [
-                'charset' => 'utf8',
-                'driver' => 'mysqli',
+                'charset' => 'utf8mb4',
+                'driver' => 'pdo_mysql',
+                'tableoptions' => [
+                    'charset' => 'utf8mb4',
+                    'collate' => 'utf8mb4_unicode_ci',
+                ],
             ],
         ],
     ],
@@ -26,6 +28,11 @@ return [
         ],
     ],
     'EXTENSIONS' => [
+        'aus_driver_amazon_s3' => [
+            'dnsPrefetch' => '1',
+            'doNotLoadAmazonLib' => '0',
+            'enablePermissionsCheck' => '0',
+        ],
         'backend' => [
             'backendFavicon' => '',
             'backendLogo' => '',
@@ -113,66 +120,41 @@ return [
             ],
         ],
     ],
-    'MAIL' => [
-        'transport' => 'sendmail',
-        'transport_sendmail_command' => '/usr/local/bin/mailhog sendmail test@example.org --smtp-addr 127.0.0.1:1025',
-        'transport_smtp_encrypt' => '',
-        'transport_smtp_password' => '',
-        'transport_smtp_server' => '',
-        'transport_smtp_username' => '',
-    ],
     'SYS' => [
         'caching' => [
             'cacheConfigurations' => [
                 'hash' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\RedisBackend',
-                    'options' => [
-                        'database' => 2,
-                        'hostname' => 'redis',
-                        'port' => 6379,
-                    ],
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
                 ],
                 'imagesizes' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\RedisBackend',
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
                     'options' => [
                         'compression' => true,
-                        'database' => 3,
-                        'hostname' => 'redis',
-                        'port' => 6379,
                     ],
                 ],
                 'pages' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\RedisBackend',
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
                     'options' => [
                         'compression' => true,
-                        'database' => 4,
-                        'hostname' => 'redis',
-                        'port' => 6379,
                     ],
                 ],
                 'pagesection' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\RedisBackend',
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
                     'options' => [
                         'compression' => true,
-                        'database' => 5,
-                        'hostname' => 'redis',
-                        'port' => 6379,
                     ],
                 ],
                 'rootline' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\RedisBackend',
+                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
                     'options' => [
                         'compression' => true,
-                        'database' => 6,
-                        'hostname' => 'redis',
-                        'port' => 6379,
                     ],
                 ],
             ],
         ],
         'devIPmask' => '',
         'displayErrors' => 0,
-        'encryptionKey' => 'bce2a46efb3a449a69e505092536645fa9c94f5488a6e4c83d34bb3645f39838f8fed04c0b0d95f8569de338d5ce1bdc',
+        'encryptionKey' => 'baa4f927b32b1e622189ccddbf28e74fef375e56a36918d47ac6d960693ad4d34d2bef8c92cbafb3fd8f9251cc6ce856',
         'exceptionalErrors' => 4096,
         'features' => [
             'yamlImportsFollowDeclarationOrder' => true,
