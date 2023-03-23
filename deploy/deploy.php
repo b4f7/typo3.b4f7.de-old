@@ -18,7 +18,7 @@ host('production')
 set('typo3_webroot', 'public');
 add('shared_files', [
     '{{typo3_webroot}}/typo3conf/AdditionalConfiguration.php',
-    '{{typo3_webroot}}/.env',
+    '.env',
 ]);
 add('writable_dirs', ['config', 'var']);
 
