@@ -16,7 +16,10 @@ host('production')
     ->set('deploy_path', '/var/www/typo3.b4f7.de');
 
 set('typo3_webroot', 'public');
-add('shared_files', ['{{typo3_webroot}}/typo3conf/AdditionalConfiguration.php']);
+add('shared_files', [
+    '{{typo3_webroot}}/typo3conf/AdditionalConfiguration.php',
+    '{{typo3_webroot}}/.env',
+]);
 add('writable_dirs', ['config', 'var']);
 
 task('deploy:cache', function () {

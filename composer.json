@@ -12,7 +12,8 @@
   "config": {
     "allow-plugins": {
       "typo3/class-alias-loader": true,
-      "typo3/cms-composer-installers": true
+      "typo3/cms-composer-installers": true,
+      "helhum/dotenv-connector": true
     },
     "platform": {
       "php": "8.1"
@@ -31,6 +32,7 @@
     "apache-solr-for-typo3/solr": "^11.5",
     "b4f7/locator": "@dev",
     "b4f7/site-package": "@dev",
+    "helhum/dotenv-connector": "^3.0",
     "helhum/typo3-console": "^7.0.2",
     "spooner/deployer-information": "^1.4",
     "typo3/cms-backend": "^11.5.0",
