@@ -1,4 +1,5 @@
 <?php
+
 return [
     'BE' => [
         'debug' => false,
@@ -124,30 +125,47 @@ return [
         'caching' => [
             'cacheConfigurations' => [
                 'hash' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => 'TYPO3\CMS\Core\Cache\Backend\RedisBackend',
+                    'options' => [
+                        'database' => 2,
+                        'hostname' => getenv('REDIS_HOST'),
+                        'port' => getenv('REDIS_PORT'),
+                    ],
                 ],
                 'imagesizes' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => 'TYPO3\CMS\Core\Cache\Backend\RedisBackend',
                     'options' => [
                         'compression' => true,
+                        'database' => 3,
+                        'hostname' => getenv('REDIS_HOST'),
+                        'port' => getenv('REDIS_PORT'),
                     ],
                 ],
                 'pages' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => 'TYPO3\CMS\Core\Cache\Backend\RedisBackend',
                     'options' => [
                         'compression' => true,
+                        'database' => 4,
+                        'hostname' => getenv('REDIS_HOST'),
+                        'port' => getenv('REDIS_PORT'),
                     ],
                 ],
                 'pagesection' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => 'TYPO3\CMS\Core\Cache\Backend\RedisBackend',
                     'options' => [
                         'compression' => true,
+                        'database' => 5,
+                        'hostname' => getenv('REDIS_HOST'),
+                        'port' => getenv('REDIS_PORT'),
                     ],
                 ],
                 'rootline' => [
-                    'backend' => 'TYPO3\\CMS\\Core\\Cache\\Backend\\Typo3DatabaseBackend',
+                    'backend' => 'TYPO3\CMS\Core\Cache\Backend\RedisBackend',
                     'options' => [
                         'compression' => true,
+                        'database' => 6,
+                        'hostname' => getenv('REDIS_HOST'),
+                        'port' => getenv('REDIS_PORT'),
                     ],
                 ],
             ],
