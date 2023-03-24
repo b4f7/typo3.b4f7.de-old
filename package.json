@@ -1,0 +1,32 @@
+{
+  "name": "typo3_b4f7_de",
+  "description": "The website at typo3.b4f7.de",
+  "license": "GPL-2.0-or-later",
+  "repository": "https://github.com/b4f7/typo3.b4f7.de",
+  "homepage": "https://typo3.b4f7.de/",
+  "author": {
+    "name": "Björn Feischen",
+    "url": "https://b4f7.de/"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "^7.20.2",
+    "autoprefixer": "^10.4.14",
+    "babel-loader": "^9.1.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.7.3",
+    "cssnano": "^5.1.15",
+    "mini-css-extract-plugin": "^2.7.3",
+    "postcss-import": "^15.1.0",
+    "postcss-loader": "^7.0.2",
+    "postcss-preset-env": "^8.0.1",
+    "sass": "^1.59.2",
+    "sass-loader": "^13.2.0",
+    "terser-webpack-plugin": "^5.3.7",
+    "webpack": "^5.76.1",
+    "webpack-cli": "^5.0.1"
+  },
+  "scripts": {
+    "build": "NODE_ENV=production webpack -c ./packages/b4f7_site_package/Resources/Private/Frontend/webpack.config.js",
+    "watch": "NODE_ENV=development webpack -c ./packages/b4f7_site_package/Resources/Private/Frontend/webpack.config.js --watch"
+  }
+}

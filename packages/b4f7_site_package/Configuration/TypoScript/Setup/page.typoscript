@@ -1,0 +1,9 @@
+page {
+    includeCSS {
+        b4f7_site_package = EXT:b4f7_site_package/Resources/Public/Css/index.css
+    }
+
+    includeJSFooter {
+        b4f7_site_package = EXT:b4f7_site_package/Resources/Public/JavaScript/index.js
+    }
+}
