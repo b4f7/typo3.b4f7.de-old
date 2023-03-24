@@ -1,8 +1,12 @@
+# 3rd-party extensions
 @import 'EXT:bootstrap_package/Configuration/TypoScript/constants.typoscript'
 @import 'EXT:wv_deepltranslate/Configuration/TypoScript/constants.typoscript'
 @import 'EXT:solr/Configuration/TypoScript/Solr/constants.typoscript'
+@import 'EXT:tt_address/Configuration/TypoScript/constants.typoscript'
 
+# 1st-party extensions
 @import 'EXT:b4f7_locator/Configuration/TypoScript/constants.typoscript'
 
+# local files
 @import 'EXT:b4f7_site_package/Configuration/TypoScript/Constants/**/*.typoscript'
 @import 'EXT:b4f7_site_package/Configuration/TypoScript/Constants/*.typoscript'

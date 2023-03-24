@@ -3,6 +3,7 @@
 @import 'EXT:wv_deepltranslate/Configuration/TypoScript/setup.typoscript'
 @import 'EXT:solr/Configuration/TypoScript/Solr/setup.typoscript'
 @import 'EXT:solr/Configuration/TypoScript/StyleSheets/setup.typoscript'
+@import 'EXT:tt_address/Configuration/TypoScript/setup.typoscript'
 
 # 1st-party extensions
 @import 'EXT:b4f7_locator/Configuration/TypoScript/setup.typoscript'
