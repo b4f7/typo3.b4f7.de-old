@@ -9,6 +9,7 @@
 !/public/typo3conf/AdditionalConfiguration.php
 /share/
 /packages/b4f7_site_package/Resources/Public/
+/node_modules/
 
 # The following:
 # Created by https://www.toptal.com/developers/gitignore/api/windows,linux,macos
