@@ -4,4 +4,10 @@ plugin.tx_solr {
 
     # cat=b4f7_site_package/solr; type=string; label=Solr password
     password =
+
+    view {
+        templateRootPath = EXT:b4f7_site_package/Resources/Private/Templates/Solr
+        partialRootPath = EXT:b4f7_site_package/Resources/Private/Partials/Solr
+        layoutRootPath = EXT:b4f7_site_package/Resources/Private/Layouts/Solr
+    }
 }
