@@ -22,6 +22,12 @@ add('shared_files', [
 ]);
 add('writable_dirs', ['config', 'var']);
 
+task('deploy:npm', function () {
+    cd('{{release_path}}');
+    run('npm install');
+    run('npm run build');
+});
+
 task('deploy:cache', function () {
     cd('{{release_path}}');
     run('vendor/bin/typo3 cache:flush');
@@ -40,6 +46,7 @@ task('deploy:language', function () {
 });
 
 task('deploy:additional', [
+    'deploy:npm',
     'deploy:db',
     'deploy:language',
     'deploy:cache'
