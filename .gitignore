@@ -8,7 +8,8 @@
 !/public/typo3conf/LocalConfiguration.php
 !/public/typo3conf/AdditionalConfiguration.php
 /share/
-/packages/b4f7_site_package/Resources/Public/
+/packages/b4f7_site_package/Resources/Public/Css
+/packages/b4f7_site_package/Resources/Public/JavaScript
 /node_modules/
 
 # The following:

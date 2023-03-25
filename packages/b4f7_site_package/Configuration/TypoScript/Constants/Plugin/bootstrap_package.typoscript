@@ -1,7 +1,13 @@
-page.fluidtemplate {
-    templateRootPath = EXT:b4f7_site_package/Resources/Private/Templates/Page/
-    partialRootPath = EXT:b4f7_site_package/Resources/Private/Partials/Page/
-    layoutRootPath = EXT:b4f7_site_package/Resources/Private/Layouts/Page/
+page {
+    fluidtemplate {
+        templateRootPath = EXT:b4f7_site_package/Resources/Private/Templates/Page/
+        partialRootPath = EXT:b4f7_site_package/Resources/Private/Partials/Page/
+        layoutRootPath = EXT:b4f7_site_package/Resources/Private/Layouts/Page/
+    }
+
+    favicon.file = EXT:b4f7_site_package/Resources/Public/Icons/favicon.ico
+
+    logo >
 }
 
 plugin.bootstrap_package_contentelements.view {
@@ -16,5 +22,3 @@ plugin.bootstrap_package {
         secondary = #1b264f
     }
 }
-
-page.logo >
