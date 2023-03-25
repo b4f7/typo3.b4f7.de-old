@@ -1,7 +1,6 @@
 const webpack = require('webpack');
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const TerserJSPlugin = require('terser-webpack-plugin');
 
 const isDev = process.env.NODE_ENV !== 'production';
@@ -82,7 +81,6 @@ module.exports = {
     new MiniCssExtractPlugin({
       filename: 'Css/[name].css',
     }),
-    new CleanWebpackPlugin(),
   ],
   resolve: {
     alias: {
