@@ -6,6 +6,7 @@ require 'recipe/typo3.php';
 
 set('application', 'typo3-b4f7-de');
 set('repository', 'git@github.com:b4f7/typo3.b4f7.de.git');
+set('git_recursive', true);
 set('keep_releases', 5);
 
 host('production')
