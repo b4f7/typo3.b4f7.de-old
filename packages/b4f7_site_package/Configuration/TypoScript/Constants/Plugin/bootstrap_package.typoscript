@@ -10,11 +10,11 @@ plugin.bootstrap_package_contentelements.view {
     layoutRootPath = EXT:b4f7_site_package/Resources/Private/Layouts/ContentElements/
 }
 
-#plugin.bootstrap_package {
-#    settings.scss {
-#        primary = #6bf178
-#        secondary = #b80c09
-#    }
-#}
+plugin.bootstrap_package {
+    settings.scss {
+        primary = #ff36ab
+        secondary = #1b264f
+    }
+}
 
 page.logo >
