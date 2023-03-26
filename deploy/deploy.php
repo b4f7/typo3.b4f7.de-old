@@ -9,6 +9,7 @@ require 'recipe/typo3.php';
 set('application', 'typo3-b4f7-de');
 set('repository', 'git@github.com:b4f7/typo3.b4f7.de.git');
 set('keep_releases', 5);
+set('update_code_strategy', 'clone');
 
 host('production')
     ->setHostname('typo3.b4f7.de')
@@ -96,7 +97,7 @@ task('deploy:update_code', function () {
         run("$git archive $targetWithDir | tar -x -f - -C {{release_path}} 2>&1");
     } elseif (get('update_code_strategy') === 'clone') {
         cd('{{release_path}}');
-        run("$git clone -l $bare .");
+        run("$git clone --recurse-submodules -l $bare .");
         run("$git remote set-url origin $repository", ['env' => $env]);
         run("$git checkout --recurse-submodules --force $target");
     } else {
