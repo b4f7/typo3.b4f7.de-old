@@ -28,10 +28,9 @@
     "build": "npm run deps && npm run build:site_package && npm run build:locator",
     "build:locator": "NODE_ENV=production webpack -c ./packages/b4f7_locator/Resources/Private/Frontend/webpack.config.js",
     "build:site_package": "NODE_ENV=production webpack -c ./packages/b4f7_site_package/Resources/Private/Frontend/webpack.config.js",
-    "deps": "npm run submodules && npm run deps:site_package && npm run deps:locator",
+    "deps": "npm run deps:site_package && npm run deps:locator",
     "deps:locator": "cd packages/b4f7_locator && npm install",
     "deps:site_package": "npm install",
-    "submodules": "git submodule init && git submodule update",
     "watch": "NODE_ENV=development webpack -c ./packages/b4f7_site_package/Resources/Private/Frontend/webpack.config.js --watch"
   }
 }
