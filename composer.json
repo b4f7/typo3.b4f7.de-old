@@ -57,8 +57,7 @@
     "typo3/cms-sys-note": "^11.5.0",
     "typo3/cms-t3editor": "^11.5.0",
     "typo3/cms-tstemplate": "^11.5.0",
-    "typo3/cms-viewpage": "^11.5.0",
-    "web-vision/wv_deepltranslate": "^2.3"
+    "typo3/cms-viewpage": "^11.5.0"
   },
   "scripts": {
     "typo3-cms-scripts": [
